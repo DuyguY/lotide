@@ -1,15 +1,23 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
-  if (actual.toString() === expected.toString()){
+  if (actual === expected){
     console.log(`✅✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);	
+  } else if (actual !== expected){
+    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
   } 
+  else {
+    console.log(undefined);
+  }
 };
 
 const tail = function (array) {
-   const result = array.slice(1);
-   return result;
+   let list = [];
+   if ( array.length > 1){
+    for( let i = 1; i < array.length; i++) {
+      list.push(array[i]);
+    }
+  }
+  return list;
 
 }
 // TEST CODE
