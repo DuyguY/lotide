@@ -17,25 +17,16 @@ const eqArrays = function (input1, input2){
 // Otherwise you get back a big fat false!
 
 const eqObjects = function(object1, object2) {
-  // checking the number of keys per object
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
-  } else {
-    for (const value in object1) {
-      if (Array.isArray(object1[value])) { // to check the value of the key is an array
-        const results = eqArrays(object1[value], object2[value]);
-        if (results === false) {
-          return false;
-        }
-      } else if ((typeof object1[value]) === 'object') { // to check the value of the key is an object
-        let results = eqObjects(object1[value], object2[value]);
-        if (!results) {
-          return false;
-        }
-      
-      } else if (object1[value] !== object2[value]) { //to check the value of the key is a primitive value
+  }
+  for (const key of Object.keys(object1)) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
+    } else if (object1[key] !== object2[key]) {
+      return false;
     }
   }
   return true;
