@@ -14,8 +14,7 @@ const assertArraysEqual = function(actual, expected){
 
   const isEqual = eqArrays(actual, expected);
   isEqual ? console.log(`✅✅✅✅Assertion Passed: ${actual} === ${expected}`) 
- 
- : console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
+          : console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
 
 };
 assertArraysEqual([1,2,3], [1,2,3]);
