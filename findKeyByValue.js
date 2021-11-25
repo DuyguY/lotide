@@ -1,6 +1,6 @@
 const findKeyByValue = function (object, value) {
  for ( const index in object){
-    if ( object[index] === value ){ // cheqing value 
+    if ( object[index] === value ){ // cheqing key by value 
       return index;
     }
   }
