@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "lotide-my-library",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project was created and published by @lotide-my-library as part of my learnings at Lighthouse Labs.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/DuyguY/lotide.git"
   },
-  "author": "",
+  "author": "lotide-my-library/lotide",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DuyguY/lotide/issues"
